@@ -1037,10 +1037,10 @@ tapable@^2.1.1, tapable@^2.2.0:
   resolved "https://registry.npm.taobao.org/tapable/download/tapable-2.2.0.tgz?cache=0&sync_timestamp=1607088902003&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftapable%2Fdownload%2Ftapable-2.2.0.tgz#5c373d281d9c672848213d0e037d1c4165ab426b"
   integrity sha1-XDc9KB2cZyhIIT0OA30cQWWrQms=
 
-tdscore@^0.1.22:
-  version "0.1.22"
-  resolved "https://registry.npm.taobao.org/tdscore/download/tdscore-0.1.22.tgz#2ca24fa8db61b44b54563e67f6dff9808cee0bed"
-  integrity sha1-LKJPqNthtEtUVj5n9t/5gIzuC+0=
+tdscore@^0.1.23:
+  version "0.1.23"
+  resolved "https://registry.npmjs.org/tdscore/-/tdscore-0.1.23.tgz#fa69245de50cf2836abe11b161f0d2581dcaf4ea"
+  integrity sha512-kWSpJJCgwcR5JPz2NnzOZE9BaQ1s9Itn3flmHPw3rXj58MSBfs+rglRxAUVUs/rC2/pVPLmjzVbC8YUjnfYchg==
   dependencies:
     bignumber.js "^9.0.1"
 
@@ -1186,10 +1186,39 @@ webpack-sources@^2.1.1:
     source-list-map "^2.0.1"
     source-map "^0.6.1"
 
-webpack@^5.1.0, webpack@^5.26.3:
+webpack@^5.1.0:
   version "5.26.3"
   resolved "https://registry.npm.taobao.org/webpack/download/webpack-5.26.3.tgz?cache=0&sync_timestamp=1615988571853&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack%2Fdownload%2Fwebpack-5.26.3.tgz#bafd439abac08fbb82657ec855d038743b725ab8"
   integrity sha1-uv1DmrrAj7uCZX7IVdA4dDtyWrg=
+  dependencies:
+    "@types/eslint-scope" "^3.7.0"
+    "@types/estree" "^0.0.46"
+    "@webassemblyjs/ast" "1.11.0"
+    "@webassemblyjs/wasm-edit" "1.11.0"
+    "@webassemblyjs/wasm-parser" "1.11.0"
+    acorn "^8.0.4"
+    browserslist "^4.14.5"
+    chrome-trace-event "^1.0.2"
+    enhanced-resolve "^5.7.0"
+    es-module-lexer "^0.4.0"
+    eslint-scope "^5.1.1"
+    events "^3.2.0"
+    glob-to-regexp "^0.4.1"
+    graceful-fs "^4.2.4"
+    json-parse-better-errors "^1.0.2"
+    loader-runner "^4.2.0"
+    mime-types "^2.1.27"
+    neo-async "^2.6.2"
+    schema-utils "^3.0.0"
+    tapable "^2.1.1"
+    terser-webpack-plugin "^5.1.1"
+    watchpack "^2.0.0"
+    webpack-sources "^2.1.1"
+
+webpack@^5.27.1:
+  version "5.27.1"
+  resolved "https://registry.npmjs.org/webpack/-/webpack-5.27.1.tgz#6808fb6e45e35290cdb8ae43c7a10884839a3079"
+  integrity sha512-rxIDsPZ3Apl3JcqiemiLmWH+hAq04YeOXqvCxNZOnTp8ZgM9NEPtbu4CaMfMEf9KShnx/Ym8uLGmM6P4XnwCoA==
   dependencies:
     "@types/eslint-scope" "^3.7.0"
     "@types/estree" "^0.0.46"
