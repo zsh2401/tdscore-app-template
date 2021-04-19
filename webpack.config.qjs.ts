@@ -51,6 +51,7 @@ const config: webpack.Configuration = {
 
 	optimization: {
 		minimizer: [
+			//@ts-ignore
 			new TerserPlugin({
 				include: /\.min\.js$/,
 				// cache: true,
@@ -63,7 +64,11 @@ const config: webpack.Configuration = {
 	},
 
 	resolve: {
-		extensions: ['.tsx', '.ts', '.js']
+		extensions: ['.tsx', '.ts', '.js'],
+		fallback: {
+			util: require.resolve("util/"),
+			os: require.resolve("os-browserify/browser")
+		}
 	}
 };
 

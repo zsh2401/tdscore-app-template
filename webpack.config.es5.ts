@@ -30,7 +30,7 @@ const config: webpack.Configuration = {
 	plugins: [
 		new webpack.DefinePlugin({
 			"__TDSCORE_VERSION__": pkfInf.version,
-			"__FOR_QJS__":false
+			"__FOR_QJS__": false
 		}),
 		new webpack.ProgressPlugin(),
 		new webpack.ProvidePlugin({
@@ -43,6 +43,7 @@ const config: webpack.Configuration = {
 
 	optimization: {
 		minimizer: [
+			//@ts-ignore
 			new TerserPlugin({
 				include: /\.min\.js$/,
 				parallel: true,
