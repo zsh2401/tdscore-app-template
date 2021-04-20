@@ -15,8 +15,6 @@ const config: webpack.Configuration = {
 		path: path.resolve(__dirname, './dist'),
 	},
 
-	// devtool: "source-map",
-
 	mode: "production",
 
 	module: {
@@ -31,9 +29,6 @@ const config: webpack.Configuration = {
 		]
 	},
 
-	// externals: {
-	// 	"bignumber.js": "BigNumber"
-	// },
 
 	plugins: [
 		new webpack.DefinePlugin({

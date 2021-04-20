@@ -5,7 +5,7 @@
   "author": "Seymour Zhang",
   "license": "MIT",
   "scripts": {
-    "build:qjs": "cross-env TS_NODE_PROJECT=\"./tsconfig.webpack.json\" webpack --config ./webpack.config.qjs.ts &&qjsc dist/qapp.js",
+    "build:qjs": "cross-env TS_NODE_PROJECT=\"./tsconfig.webpack.json\" webpack --config ./webpack.config.qjs.ts",
     "build:qapp": "npm run build:qjs && qjsc dist/qapp.min.js -o dist/qapp",
     "build:es5": "cross-env TS_NODE_PROJECT=\"./tsconfig.webpack.json\" webpack --config ./webpack.config.es5.ts",
     "build": "npm run build:es5 && npm run build:qjs",
@@ -14,7 +14,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "os-browserify": "^0.3.0",
-    "printj": "^1.2.2",
+    "printj": "1.2.0",
     "tdscore": "^0.1.31",
     "util": "^0.12.3"
   },

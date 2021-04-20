@@ -987,10 +987,10 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-printj@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.npm.taobao.org/printj/download/printj-1.2.2.tgz#620eb0f07509394545fe82f97fe73baa8ad86992"
-  integrity sha1-Yg6w8HUJOUVF/oL5f+c7qorYaZI=
+printj@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.nlark.com/printj/download/printj-1.2.0.tgz#852fca7283cdb82f3fd08d007bde701a224cc397"
+  integrity sha1-hS/KcoPNuC8/0I0Ae95wGiJMw5c=
 
 process@^0.11.10:
   version "0.11.10"

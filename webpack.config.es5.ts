@@ -54,7 +54,11 @@ const config: webpack.Configuration = {
 	},
 
 	resolve: {
-		extensions: ['.tsx', '.ts', '.js']
+		extensions: ['.tsx', '.ts', '.js'],
+		fallback: {
+			util: require.resolve("util/"),
+			os: require.resolve("os-browserify/browser")
+		}
 	}
 };
 

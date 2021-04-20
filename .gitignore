@@ -4,3 +4,4 @@ lib
 *.log
 out
 package-lock.json
+*.out
