@@ -1,11 +1,11 @@
-import { sprintf } from "printj/types"
-import { HashMap, ESHashMap, hash } from "tdscore"
+import { sprintf } from "printj"
+import { HashMap, ESHashMap, hash, DSArray, LinkedList, DSObject } from "tdscore"
 import { quickSort, shellSort } from "tdscore/lib/algorithm"
 import { cost, generateRandomArray } from "./util"
 
 
 export default function () {
-    const str = sprintf("%-10s\t%-10s\t%-25s\t%s", "Times", "Target", "Operation", "Used time").bgCyan.black
+    const str = sprintf("%-10s\t%-10s\t%-25s\t%s", "N/times", "Target", "Operation", "Used time").bgCyan.black
     console.log(str)
     cost("100,000", "HashMap", "put & get", () => {
         const map = new HashMap()
@@ -40,13 +40,28 @@ export default function () {
         }
     })
 
+    cost("1,000,000", "DSArray", "random read&write", (a: DSArray<number>) => {
+        for (let i = 0; i < 1_000_000; i++) {
+            Math.random() > 0.5 ? a[i] : a[i] = 0
+        }
+    }, (() => {
+        const jsArray = generateRandomArray(1000000)
+        return new DSArray(1000000, (i) => jsArray[i])
+    })())
 
-
-    cost("1", "shell sort", "100k size array", () => {
-        shellSort(generateRandomArray(), (a, b) => a - b)
+    cost("1,000,000", "DSObject&LinkedList", "create dsobject and save it", () => {
+        const l = new LinkedList<DSObject>()
+        for (let i = 0; i < 1_000_000; i++) {
+            l.listAdd(new DSObject())
+        }
     })
 
-    cost("1", "quick sort", "10k size array", () => {
-        quickSort(generateRandomArray(10000), (a, b) => a - b)
-    })
+    cost("100,000", "shell sort", "", (arr: number[]) => {
+        shellSort(arr, (a, b) => a - b)
+    }, generateRandomArray(100_000))
+
+    cost("1,000", "quick sort", "", (arr: number[]) => {
+        quickSort(arr, (a, b) => a - b)
+    }, generateRandomArray(1000))
+
 }
