@@ -5,29 +5,25 @@
   "author": "Seymour Zhang",
   "license": "MIT",
   "scripts": {
-    "build:qjs": "cross-env TS_NODE_PROJECT=\"./tsconfig.webpack.json\" webpack --config ./webpack.config.qjs.ts",
-    "build:qapp": "npm run build:qjs && qjsc dist/qapp.min.js -o dist/qapp",
-    "build:es5": "cross-env TS_NODE_PROJECT=\"./tsconfig.webpack.json\" webpack --config ./webpack.config.es5.ts",
-    "build": "npm run build:es5 && npm run build:qjs",
-    "start": "ts-node src/index.ts"
+    "build": "npm run build:browser && npm run build:node && npm run build:qjs",
+    "build:browser": "esbuild src/index.ts --bundle --outfile=dist/app.browser.js --platform=browser",
+    "build:node": "esbuild src/index.ts --bundle --outfile=dist/app.node.js --platform=node",
+    "build:qjs": "npm run build:browser && qjsc dist/app.browser.js -o dist/qapp",
+    "start:browser": "npm run build:browser && node dist/app.browser.js",
+    "start:node": "npm run build:node && node dist/app.node.js",
+    "start:qjs": "npm run build:qjs && ./dist/qapp",
+    "start": "npm run start:node"
   },
   "dependencies": {
     "colors": "^1.4.0",
     "os-browserify": "^0.3.0",
     "printj": "1.2.0",
-    "tdscore": "^0.1.32",
+    "tdscore": "^0.2.3",
     "util": "^0.12.3"
   },
   "devDependencies": {
-    "@types/terser-webpack-plugin": "^5.0.3",
-    "@types/webpack-bundle-analyzer": "^4.4.0",
-    "cross-env": "^7.0.3",
-    "process": "^0.11.10",
+    "esbuild": "^0.12.15",
     "ts-loader": "^9.0.0",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4",
-    "webpack": "^5.34.0",
-    "webpack-bundle-analyzer": "^4.4.1",
-    "webpack-cli": "^4.6.0"
+    "typescript": "^4.2.4"
   }
 }
