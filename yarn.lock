@@ -394,10 +394,10 @@ tapable@^2.2.0:
   resolved "https://registry.npm.taobao.org/tapable/download/tapable-2.2.0.tgz?cache=0&sync_timestamp=1607088902003&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftapable%2Fdownload%2Ftapable-2.2.0.tgz#5c373d281d9c672848213d0e037d1c4165ab426b"
   integrity sha1-XDc9KB2cZyhIIT0OA30cQWWrQms=
 
-tdscore@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.nlark.com/tdscore/download/tdscore-0.2.3.tgz?cache=0&sync_timestamp=1626950610328&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftdscore%2Fdownload%2Ftdscore-0.2.3.tgz#39275f03756d275ef7c431467b7f42d99006cf8e"
-  integrity sha1-OSdfA3VtJ173xDFGe39C2ZAGz44=
+tdscore@^0.1.34:
+  version "0.1.34"
+  resolved "https://registry.nlark.com/tdscore/download/tdscore-0.1.34.tgz?cache=0&sync_timestamp=1626950610328&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftdscore%2Fdownload%2Ftdscore-0.1.34.tgz#aad00c05d2421ad942bf90c051421d5276ca22ca"
+  integrity sha1-qtAMBdJCGtlCv5DAUUIdUnbKIso=
   dependencies:
     bignumber.js "^9.0.1"
     sha256 "^0.2.0"
