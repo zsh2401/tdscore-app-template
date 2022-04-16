@@ -1,6 +1,6 @@
 {
   "name": "tdscore-app-template",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "main": "index.js",
   "author": "Seymour Zhang",
   "license": "MIT",
@@ -8,22 +8,18 @@
     "build": "npm run build:browser && npm run build:node && npm run build:qjs",
     "build:browser": "esbuild src/index.ts --bundle --outfile=dist/app.browser.js --platform=browser",
     "build:node": "esbuild src/index.ts --bundle --outfile=dist/app.node.js --platform=node",
-    "build:qjs": "npm run build:browser && qjsc dist/app.browser.js -o dist/qapp",
+    "build:qjs": "npm run build:browser && qjsc -o dist/qapp dist/app.browser.js",
     "start:browser": "npm run build:browser && node dist/app.browser.js",
     "start:node": "npm run build:node && node dist/app.node.js",
     "start:qjs": "npm run build:qjs && ./dist/qapp",
     "start": "npm run start:node"
   },
   "dependencies": {
-    "colors": "^1.4.0",
-    "os-browserify": "^0.3.0",
-    "printj": "1.2.0",
-    "tdscore": "^0.2.3",
-    "util": "^0.12.3"
+    "tdscore": "^0.3.0"
   },
   "devDependencies": {
-    "esbuild": "^0.12.15",
-    "ts-loader": "^9.0.0",
-    "typescript": "^4.2.4"
+    "esbuild": "^0.14.36",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3"
   }
 }
